@@ -208,6 +208,8 @@ javascript:
 			var interval = setInterval(comet, period*1000);
 			setTimeout(comet, 1);
 			function comet(){
+				var ab = cn("ytp-ad-skip-button")[0];
+				if(ab) ab.click();
 				if(!cn("comeDisp_"+ dispTS)[0]){
 					log("COME_RESET");
 					clearInterval(interval);
@@ -243,6 +245,7 @@ javascript:
 				<h2>更新日</h2>
 				<p>
 					<ul>
+						<li>2022-05-09 広告スキップボタンを自動で押す</li>
 						<li>2021-12-07 仕様を少し記述，コメントが多い場合スクロールしないと続きが読み込まれない問題に対応</li>
 						<li>2021-04-27 このページを作成</li>
 						<li>2021-04-22 Twitter に投稿</li>
